@@ -44,8 +44,6 @@
 
 ;;Python wanted this
 (setq-default tab-width 4)
-(setq indent-tabs-mode nil
-      python-shell-interpreter "C:/Program Files/Python34/python.exe")
 
 (add-hook 'python-mode-hook
 		  (lambda ()
