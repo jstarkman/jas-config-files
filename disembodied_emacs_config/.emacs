@@ -25,7 +25,7 @@
 (setq-default tab-width 4)       ;force it
 (column-number-mode t)           ;and columns
 (set-face-background 'region nil);no highlighting
-(global-whitespace-mode 1)       ;makes foreign code easier
+;(global-whitespace-mode 1)       ;makes foreign code easier
 
 ;; Write backup files to own directory
 (setq backup-directory-alist

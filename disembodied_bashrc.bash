@@ -15,3 +15,5 @@ PATH=$PATH:/home/jas497/ros_ws/src/learning_ros_external_packages
 
 ## useful aliases
 alias ckm='cd ~/ros_ws && catkin_make'
+alias eb='rosrun baxter_tools enable_robot.py'
+
