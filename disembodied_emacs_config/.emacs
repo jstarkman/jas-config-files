@@ -52,8 +52,6 @@
 			(setq python-indent 4)))
 
 ;;Octave
-(setq auto-mode-alist (cons '("\\.m$" . octave-mode) auto-mode-alist))
-
 (add-hook 'octave-mode-hook
 		  (lambda ()
 			(abbrev-mode 1)
@@ -61,21 +59,26 @@
 
 
 ;Now for plugins and requires
-(add-to-list 'load-path
-"/home/jas497/jas-config-files/disembodied_emacs_config/yasnippet/")
-(add-to-list 'load-path
-"/home/jas497/jas-config-files/disembodied_emacs_config/")
+(setq me "~/jas-config-files/disembodied_emacs_config/")
+(add-to-list 'load-path me)
+(add-to-list 'load-path (concat me "yasnippet/"))
+(add-to-list 'load-path (concat me "lua-mode.el"))
 
 ;more modes
-(autoload 'multi-mode     "multi-mode"   "Allows multiple major modes at once" t)
-(autoload 'arduino-mode   "arduino-mode" "Major mode for C++-for-Arduino" t)
-(autoload 'octave-mode    "octave-mod"   "Major mode for Octave" t)
-(autoload 'markdown-mode  "markdown-mode.el"   "Major mode for Markdown" t)
-(autoload 'yasnippet-mode "yasnippet.el"   "Minor mode for snippets" t)
+(autoload 'multi-mode      "multi-mode"         "Allows multiple major modes at once" t)
+(autoload 'arduino-mode    "arduino-mode"       "Major mode for C++-for-Arduino" t)
+(autoload 'octave-mode     "octave-mod"         "Major mode for Octave" t)
+(autoload 'markdown-mode   "markdown-mode.el"   "Major mode for Markdown" t)
+(autoload 'yasnippet-mode  "yasnippet.el"       "Minor mode for snippets" t)
 (autoload 'smart-tabs-mode "smart-tabs-mode.el" "Tabs to indent, spaces to align" t)
+(autoload 'lua-mode        "lua-mode.el"        "Lua editing mode." t)
 (autoload 'markdown-preview-mode "markdown-preview-mode.el" "Preview markdown!" t)
 
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.m$"   . octave-mode  ))
+(add-to-list 'auto-mode-alist '("\\.md$"  . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode     ))
+
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 ;javascript
 (defalias 'espresso-mode 'js-mode) ;javascript-mode also points to js-mode
