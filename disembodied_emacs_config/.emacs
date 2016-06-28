@@ -73,6 +73,7 @@
 (autoload 'smart-tabs-mode "smart-tabs-mode.el" "Tabs to indent, spaces to align" t)
 (autoload 'lua-mode        "lua-mode.el"        "Lua editing mode." t)
 (autoload 'markdown-preview-mode "markdown-preview-mode.el" "Preview markdown!" t)
+(autoload 'groovy-mode     "groovy-mode.el"     "Groovy editing mode." t)
 
 (add-to-list 'auto-mode-alist '("\\.m$"   . octave-mode  ))
 (add-to-list 'auto-mode-alist '("\\.md$"  . markdown-mode))
