@@ -7,12 +7,11 @@ alias xclip='xclip -selection c'
 alias tree='tree -a'
 alias less='less -r'
 
-alias gita='git add'
-alias gitb='git branch'
-alias gitc='git commit'
-alias gitm='git merge --no-ff'
 alias gitl='git log --oneline --graph --color --all --decorate'
 alias gits='git status'
+
+alias ckm='cd ~/ros_ws && catkin_make'
+alias eb='rosrun baxter_tools enable_robot.py'
 
 alias dog='pygmentize -g -O linenos=1'
 
