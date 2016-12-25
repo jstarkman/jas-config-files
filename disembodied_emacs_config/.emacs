@@ -1,6 +1,7 @@
 ;;;Organisation:
 ;;;  first, default emacs changes
 ;;;  then, (require 'foo)
+;;;  then, custom functions
 ;;;  then, keybindings
 
 ;; Turn off mouse interface early in startup to avoid momentary display
@@ -104,6 +105,27 @@
       "Kill a rectangular region and save it in the kill ring." t)
     (autoload 'rm-kill-ring-save "rect-mark"
       "Copy a rectangular region to the kill ring." t)
+
+;custom functions
+
+; http://stackoverflow.com/a/25212377
+(defun rename-current-buffer-file ()
+  "Renames current buffer and file it is visiting."
+  (interactive)
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (let ((new-name (read-file-name "New name: " filename)))
+        (if (get-buffer new-name)
+            (error "A buffer named '%s' already exists!" new-name)
+          (rename-file filename new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil)
+          (message "File '%s' successfully renamed to '%s'"
+                   name (file-name-nondirectory new-name)))))))
+
 
 ;keybindings
 (setq w32-pass-apps-to-system     nil
