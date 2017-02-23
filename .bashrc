@@ -18,9 +18,14 @@ includeViaSourcing /opt/ros/indigo/setup.bash
 ## tell ros about our new packages
 includeViaSourcing ~/ros_ws/devel/setup.bash
 
+here=~/jas-config-files
+
 ## put a useful tool on the path
-PATH=$PATH:/home/jas497/ros_ws/src/learning_ros_external_packages
+PATH=$PATH:$HOME/ros_ws/src/learning_ros_external_packages
+
+## put own scripts on path
+PATH=$here/bin:$PATH
 
 ## Aliases!
-source ~/jas-config-files/.bash_aliases
+. $here/.bash_aliases
 

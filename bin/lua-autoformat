@@ -1,0 +1,3 @@
+#! /bin/sh
+perl `dirname $0`/lua-autoformat.pl $1 > tmp_$1
+mv tmp_$1 $1
