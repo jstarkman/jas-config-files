@@ -1,0 +1,2 @@
+#! /bin/sh
+pandoc -o `echo $1 | perl -pe 's/\..*?$//'`.pdf -V links-as-notes=true $1
