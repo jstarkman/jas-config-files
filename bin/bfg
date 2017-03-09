@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# source: https://rtyley.github.io/bfg-repo-cleaner/
+vers=1.12.15
+
+f=`dirname $0`/bfg-$vers.jar
+if [ ! -f $f ]; then
+   wget -P `dirname $0` http://repo1.maven.org/maven2/com/madgag/bfg/$vers/bfg-$vers.jar
+fi
+java -jar $f $*
