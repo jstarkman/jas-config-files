@@ -1,29 +1,12 @@
 # Personal set of configuration files
 
-## Bash
+Usage:
 
-Put this in the main ~/.bashrc (or ~/.bash_profile).  It will
-automatically load the aliases.
-
-```bash
-source ~/jas-config-files/.bashrc 
+```
+$ git clone https://github.com/jas497/jas-config-files
+$ jas-config-files/set-config-files
+$ . ~/.bashrc # and refresh/restart other programs as needed
 ```
 
-## Emacs
-
-Everything is under `disembodied_emacs_config`, including the dotfile.
-
-Put this in the main ~/.emacs:
-
-```elisp
-(load "~/jas-config-files/disembodied_emacs_config/.emacs")
-```
-
-## Vim
-
-Put this in the main ~/.vimrc:
-
-```vimrc
-source ~/jas-config-files/.vimrc
-```
-
+This is a collection of scripts, tools, and libraries that I find
+useful to have on new systems.
