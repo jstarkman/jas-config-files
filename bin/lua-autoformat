@@ -1,3 +1,8 @@
 #! /bin/sh
-perl `dirname $0`/lua-autoformat.pl $1 > tmp_$1
+here=`dirname $0`
+if [ $here = '.' ]
+then
+   here=`pwd`
+fi
+perl $here/lua-autoformat.pl $1 > tmp_$1
 mv tmp_$1 $1

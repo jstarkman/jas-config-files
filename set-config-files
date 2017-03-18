@@ -1,0 +1,12 @@
+#!/bin/sh
+
+here=`dirname $0`
+if [ $here = '.' ]
+then
+   here=`pwd`
+fi
+
+echo ". $here/.bashrc" >> ~/.bashrc
+echo '(load "'$here'/.emacs")' >> ~/.emacs
+echo "source $here/.vimrc" >> ~/.vimrc
+echo "source('$here/.Renviron')" >> ~/.Renviron
