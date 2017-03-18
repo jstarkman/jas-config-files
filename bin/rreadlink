@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Source: http://stackoverflow.com/a/29835459 mklement0
 rreadlink() ( # Execute the function in a *subshell* to localize variables and the effect of `cd`.
 
@@ -46,30 +45,3 @@ rreadlink() ( # Execute the function in a *subshell* to localize variables and t
     command printf '%s\n' "${targetDir%/}/$fname"
   fi
 )
-
-# JAS code begins here
-
-here=$(dirname $(rreadlink "$0"))
-
-# Appends lines from $1 to $2 if they are missing (if strcmp fails)
-appendIfMissing() {
-   if [ -f $2 ];
-   then
-      echo "$1" | while read -r line; do
-         if grep -Fxq "$line" "$2"
-         then
-            echo "No need to update $2 with $line."
-         else
-            echo $line >> $2
-         fi
-      done # < $1
-   else
-      echo "$1" > $2
-   fi
-}
-
-appendIfMissing ". $here/.bashrc"           ~/.bashrc
-appendIfMissing '(load "'$here'/.emacs")'   ~/.emacs
-appendIfMissing "source $here/.vimrc"       ~/.vimrc
-appendIfMissing "source('$here/.Renviron')" ~/.Renviron
-appendIfMissing "`cat $here/ssh-config`"    ~/.ssh/config
