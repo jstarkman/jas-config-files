@@ -29,5 +29,7 @@ PATH=$here/bin:$PATH
 ## Aliases!
 . $here/.bash_aliases
 
-## Lua
-LUA_PATH="$here/lua-includes/?.lua;$LUA_PATH"
+## Other
+export LUA_PATH="$here/lua-includes/?.lua;$LUA_PATH"
+export EDITOR=vi
+export VISUAL=vi
