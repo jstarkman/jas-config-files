@@ -26,6 +26,9 @@ PATH=$PATH:$HOME/ros_ws/src/learning_ros_external_packages
 ## put own scripts on path
 PATH=$here/bin:$PATH
 
+# put `pip install --user <packages> on the path
+PATH=$PATH:~/.local/bin
+
 ## Aliases!
 . $here/.bash_aliases
 
