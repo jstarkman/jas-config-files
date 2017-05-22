@@ -1,0 +1,7 @@
+#!/bin/sh
+# https://stackoverflow.com/a/33760160
+set -e
+git tag $2 $1
+git tag -d $1
+git push origin :refs/tags/$1
+git push --tags
