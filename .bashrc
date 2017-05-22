@@ -36,3 +36,19 @@ PATH=$PATH:~/.local/bin
 export LUA_PATH="$here/lua-includes/?.lua;$LUA_PATH"
 export EDITOR=vi
 export VISUAL=vi
+
+## keyboard remapping.  Program runs in background
+xcapeConfig='Shift_L=Shift_L|parenleft;Shift_R=Shift_R|parenright'
+ps cax | grep xcape > /dev/null
+if [ $? -ne 0 ]; then
+   xcape=`which xcape`
+   if [ $xcape = "" ]; then
+      # https://github.com/alols/xcape
+      git clone https://github.com/alols/xcape.git
+      cd xcape
+      make
+      xcape=`pwd`/xcape
+      cd -
+   fi
+   $xcape -e $xcapeConfig
+fi
