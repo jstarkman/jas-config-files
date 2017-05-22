@@ -87,9 +87,8 @@
 
 ;snippets! (this is extensible _macros_ at work)
 
-(when (fboundp 'cl-lib)
-  (require 'yasnippet)
-  (yas-global-mode 1))
+(require 'yasnippet)
+(yas-global-mode 1)
 
 ;; Make rectangular selections easier to see
 (require 'rect-mark)
