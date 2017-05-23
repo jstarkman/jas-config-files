@@ -52,3 +52,7 @@ if [ $? -ne 0 ]; then
    fi
    $xcape -e $xcapeConfig
 fi
+
+# infinite history
+export HISTSIZE=
+export HISTFILESIZE=
