@@ -3,7 +3,7 @@
 Usage:
 
 ```
-$ git clone https://github.com/jas497/jas-config-files
+$ git clone https://github.com/jstarkman/jas-config-files
 $ jas-config-files/set-config-files
 $ . ~/.bashrc # and refresh/restart other programs as needed
 ```
