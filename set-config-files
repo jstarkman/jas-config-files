@@ -73,3 +73,5 @@ appendIfMissing '(load "'$here'/.emacs")'   ~/.emacs
 appendIfMissing "source $here/.vimrc"       ~/.vimrc
 appendIfMissing "source('$here/.Renviron')" ~/.Renviron
 appendIfMissing "`cat $here/ssh-config`"    ~/.ssh/config
+
+ln -s "$here/.config/Code/User/settings.json" ~/.config/Code/User/settings.json
