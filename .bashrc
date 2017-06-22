@@ -13,7 +13,7 @@ includeViaSourcing () {
 }
 
 ## run ros setup
-includeViaSourcing /opt/ros/indigo/setup.bash
+includeViaSourcing /opt/ros/kinetic/setup.bash
 
 ## tell ros about our new packages
 includeViaSourcing ~/ros_ws/devel/setup.bash
@@ -54,5 +54,11 @@ if [ $? -ne 0 ]; then
 fi
 
 # infinite history
+# https://stackoverflow.com/a/19533853
+shopt -s histappend
 export HISTSIZE=
 export HISTFILESIZE=
+
+# Android
+export ANDROID_HOME=~/Android/Sdk/
+export EIGEN3_INCLUDE_DIR=/usr/include/eigen3/
