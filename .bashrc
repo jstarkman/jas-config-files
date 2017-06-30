@@ -26,8 +26,8 @@ PATH=$PATH:$HOME/ros_ws/src/learning_ros_external_packages
 ## put own scripts on path
 PATH=$here/bin:$PATH
 
-# put `pip install --user <packages> on the path
-PATH=$PATH:~/.local/bin
+# put `pip install --user <packages> on the path (and Rust too)
+PATH=$PATH:~/.local/bin:~/.cargo/bin
 
 ## Aliases!
 . $here/.bash_aliases
@@ -61,4 +61,7 @@ export HISTFILESIZE=
 
 # Android
 export ANDROID_HOME=~/Android/Sdk/
+export NDK_HOME=~/Android/Sdk/ndk-bundle/
+
+# Eigen
 export EIGEN3_INCLUDE_DIR=/usr/include/eigen3/
