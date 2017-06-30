@@ -75,10 +75,12 @@
 (autoload 'lua-mode        "lua-mode.el"        "Lua editing mode." t)
 (autoload 'markdown-preview-mode "markdown-preview-mode.el" "Preview markdown!" t)
 (autoload 'groovy-mode     "groovy-mode.el"     "Groovy editing mode." t)
+(autoload 'rust-mode       "rust-mode"          "Major mode for Rust" t)
 
 (add-to-list 'auto-mode-alist '("\\.m$"   . octave-mode  ))
 (add-to-list 'auto-mode-alist '("\\.md$"  . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode     ))
+(add-to-list 'auto-mode-alist '("\\.rs$"  . rust-mode    ))
 
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
