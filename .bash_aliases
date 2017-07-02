@@ -4,7 +4,6 @@ alias hx='hexdump -C'
 alias fn='find . -name'
 alias ll='ls -alF --color=always'
 alias dir='ll'
-alias see-path='echo $PATH | tr ":" "\n"'
 
 alias xclip='xclip -selection c'
 alias tree='tree -a'
@@ -26,3 +25,6 @@ dogl () {
    dog $1 | less -r
 }
 
+see_path () {
+   echo ${1:-$PATH} | tr ":" "\n"
+}
