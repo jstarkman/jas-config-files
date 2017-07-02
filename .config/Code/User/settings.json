@@ -1,9 +1,11 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontSize": 14,
+    "editor.formatOnSave": true,
     "editor.lineNumbers": "on",
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
+    "files.autoSave": "off",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -17,5 +19,21 @@
     "C_Cpp.clang_format_fallbackStyle": "none",
     "C_Cpp.intelliSenseEngine": "Default",
     "C_Cpp.autocomplete": "Default",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "rust.mode": "rls",
+    "rust.racerPath": "/home/jas/.cargo/bin/racer",
+    "rust.rustfmtPath": "/home/jas/.cargo/bin/rustfmt",
+    "rust.rustsymPath": "/home/jas/.cargo/bin/rustsym",
+    "rust.rustup": "/home/jas/.cargo/bin/rustup",
+    "rust.rustLangSrcPath": "~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/",
+    "rust.cargoHomePath": "~/.cargo/",
+    "rust.rls": {
+        "executable": "/home/jas/.cargo/bin/rustup",
+        "args": [
+            "run",
+            "nightly",
+            "rls"
+        ],
+        "useRustfmt": true
+    }
 }
