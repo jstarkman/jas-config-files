@@ -1,0 +1,16 @@
+#!/bin/sh
+
+pip install jupyterthemes
+
+cat << EOF >> ~/.ipython/profile_default/startup/startup.ipy
+from jupyterthemes import jtplot
+
+jtplot.style(theme='onedork')
+
+jtplot.style(context='talk', fscale=1.4, gridlines='--')
+
+jtplot.style(ticks=True)
+EOF
+
+jt -t onedork -T -N -fs 9 -cellw 99% -lineh 120 -nfs 10
+
