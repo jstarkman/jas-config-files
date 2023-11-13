@@ -1,0 +1,35 @@
+#TabsToolbar, #tabbrowser-tabs {
+	visibility:collapse !important;
+}
+
+/* Removed for FF 117 to make the address bar appear again.
+#titlebar {
+	margin-bottom: -34px !important;
+}
+*/
+
+
+/* Has not worked since FF 65 due to buttons now being in tab bar
+#titlebar-buttonbox {
+	height: 32px !important;
+}
+
+#nav-bar {
+	margin-right: 138px;
+}
+*/
+
+#sidebar {
+	min-width: 10px !important;
+}
+
+/* Added for FF 107 to fix regression. */
+#sidebar-box {
+	min-width: 0px !important;
+	max-width: none !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+#sidebar-header {
+	display: none;
+}
