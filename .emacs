@@ -62,7 +62,6 @@
 ;Now for plugins and requires
 (setq me "~/jas-config-files/disembodied_emacs_config/")
 (add-to-list 'load-path me)
-(add-to-list 'load-path (concat me "yasnippet/"))
 (add-to-list 'load-path (concat me "lua-mode.el"))
 
 ;more modes
@@ -70,7 +69,6 @@
 (autoload 'arduino-mode    "arduino-mode"       "Major mode for C++-for-Arduino" t)
 (autoload 'octave-mode     "octave-mod"         "Major mode for Octave" t)
 (autoload 'markdown-mode   "markdown-mode.el"   "Major mode for Markdown" t)
-(autoload 'yasnippet-mode  "yasnippet.el"       "Minor mode for snippets" t)
 (autoload 'smart-tabs-mode "smart-tabs-mode.el" "Tabs to indent, spaces to align" t)
 (autoload 'lua-mode        "lua-mode.el"        "Lua editing mode." t)
 (autoload 'markdown-preview-mode "markdown-preview-mode.el" "Preview markdown!" t)
@@ -86,11 +84,6 @@
 
 ;javascript
 (defalias 'espresso-mode 'js-mode) ;javascript-mode also points to js-mode
-
-;snippets! (this is extensible _macros_ at work)
-
-(require 'yasnippet)
-(yas-global-mode 1)
 
 ;; Make rectangular selections easier to see
 (require 'rect-mark)
