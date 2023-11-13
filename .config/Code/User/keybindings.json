@@ -1,7 +1,131 @@
 [
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeWindow",
-        "when": "!editorIsOpen"
-    }
+	{
+		"key": "ctrl+tab",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+tab",
+		"command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+	},
+	{
+		"key": "ctrl+tab",
+		"command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+		"when": "inEditorsPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.previousEditor"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "-workbench.action.openPreviousRecentlyUsedEditorInGroup"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+		"when": "inEditorsPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "block-travel.jumpUp",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "alt+[",
+		"command": "block-travel.jumpUp",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "shift+alt+[",
+		"command": "block-travel.jumpUp",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "alt+up",
+		"command": "-block-travel.jumpUp",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "block-travel.jumpDown",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "alt+]",
+		"command": "block-travel.jumpDown",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "shift+alt+]",
+		"command": "block-travel.jumpDown",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "alt+down",
+		"command": "-block-travel.jumpDown",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+b",
+		"command": "cursorWordStartLeft",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "alt+f",
+		"command": "cursorWordEndRight",
+		"when": "editorTextFocus || textInputFocus"
+	},
+	{
+		"key": "alt+d",
+		"command": "deleteWordRight",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+l",
+		"command": "editor.action.transformToLowercase",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+c",
+		"command": "editor.action.transformToTitlecase",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+u",
+		"command": "editor.action.transformToUppercase",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+;",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+a",
+		"command": "-editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+;",
+		"command": "editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "-editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "undo"
+	},
+	{
+		"key": "shift+alt+r",
+		"command": "revealFileInOS"
+	},
+	{
+		"key": "shift+alt+r",
+		"command": "-revealFileInOS",
+		"when": "!editorFocus"
+	}
 ]

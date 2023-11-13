@@ -1,39 +1,83 @@
-// Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 14,
-    "editor.formatOnSave": true,
-    "editor.lineNumbers": "on",
+    "diffEditor.diffAlgorithm": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.detectIndentation": true,
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss05', 'ss06'",
+    "editor.fontWeight": "400",
+    "editor.guides.bracketPairs": true,
+    "editor.insertSpaces": false,
     "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "boundary",
-    "files.autoSave": "off",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80,
+        88,
+        100,
+        120
+    ],
+    "editor.tabSize": 8,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.log.*": "log",
+        "*.service": "ini",
+        "Jenkinsfile*": "groovy",
     },
-    "workbench.iconTheme": "vscode-icons",
-    "C_Cpp.clang_format_formatOnSave": true,
-    "C_Cpp.clang_format_style": "file",
-    "C_Cpp.clang_format_fallbackStyle": "none",
-    "C_Cpp.intelliSenseEngine": "Default",
-    "C_Cpp.autocomplete": "Default",
-    "vsicons.dontShowNewVersionMessage": true,
-    "rust.mode": "rls",
-    "rust.racerPath": "/home/jas/.cargo/bin/racer",
-    "rust.rustfmtPath": "/home/jas/.cargo/bin/rustfmt",
-    "rust.rustsymPath": "/home/jas/.cargo/bin/rustsym",
-    "rust.rustup": "/home/jas/.cargo/bin/rustup",
-    "rust.rustLangSrcPath": "~/.multirust/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/",
-    "rust.cargoHomePath": "~/.cargo/",
-    "rust.rls": {
-        "executable": "/home/jas/.cargo/bin/rustup",
-        "args": [
-            "run",
-            "nightly",
-            "rls"
-        ],
-        "useRustfmt": true
-    }
+    "files.autoSave": "off",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.suggestSmartCommit": false,
+    "telemetry.telemetryLevel": "off",
+    "window.title": "${rootPath}${separator}${dirty}${activeEditorLong}",
+    "workbench.editorAssociations": {
+        "*.hex": "hexEditor.hexedit",
+        "*.class": "hexEditor.hexedit",
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.wrapTabs": true,
+    "workbench.sideBar.location": "right",
+    "workbench.tree.indent": 32,
+    "workbench.tree.renderIndentGuides": "always",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:/Program Files/Java/jdk1.8.0_231"
+        }
+    ],
+    "java.debug.settings.showHex": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
+    "java.jdt.ls.java.home": "C:/Program Files/AdoptOpenJDK/jdk-11.0.10.9-hotspot",
+    "maven.executable.options": "-DskipTests=true",
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "C:/Program Files/Java/jdk1.8.0_231"
+        }
+    ],
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[properties]": {}
 }
