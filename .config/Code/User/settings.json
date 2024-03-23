@@ -26,14 +26,25 @@
         "*.log.*": "log",
         "*.service": "ini",
         "Jenkinsfile*": "groovy",
+        "*.conf.*": "properties",
+        ".env*": "dotenv",
+        "appsettings.*.json": "jsonc",
+        "appsettings.json": "jsonc",
+        "app.json": "jsonc",
+        "workspace.json": "jsonc"
     },
     "files.autoSave": "off",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "git.confirmSync": false,
     "git.suggestSmartCommit": false,
     "telemetry.telemetryLevel": "off",
+    "window.commandCenter": false,
+    "window.confirmBeforeClose": "always",
+    "window.menuBarVisibility": "compact",
     "window.title": "${rootPath}${separator}${dirty}${activeEditorLong}",
+    "window.titleSeparator": " | ",
     "workbench.editorAssociations": {
         "*.hex": "hexEditor.hexedit",
         "*.class": "hexEditor.hexedit",
@@ -46,19 +57,20 @@
     "workbench.tree.indent": 32,
     "workbench.tree.renderIndentGuides": "always",
     "java.configuration.runtimes": [
+
         {
-            "name": "JavaSE-1.8",
-            "path": "C:/Program Files/Java/jdk1.8.0_231"
+            "name": "JavaSE-11",
+            "path": "C:/Program Files/Microsoft/jdk-11.0.21.9-hotspot"
         }
     ],
     "java.debug.settings.showHex": true,
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
-    "java.jdt.ls.java.home": "C:/Program Files/AdoptOpenJDK/jdk-11.0.10.9-hotspot",
+    "java.jdt.ls.java.home": "C:/Program Files/Microsoft/jdk-11.0.21.9-hotspot",
     "maven.executable.options": "-DskipTests=true",
     "maven.terminal.customEnv": [
         {
             "environmentVariable": "JAVA_HOME",
-            "value": "C:/Program Files/Java/jdk1.8.0_231"
+            "value": "C:/Program Files/Microsoft/jdk-11.0.21.9-hotspot"
         }
     ],
     "[css]": {
