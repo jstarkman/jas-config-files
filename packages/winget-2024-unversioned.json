@@ -1,0 +1,122 @@
+{
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2024-10-16T12:30:17.284-00:00",
+	"Sources": [
+		{
+			"Packages": [
+				{
+					"PackageIdentifier": "7zip.7zip"
+				},
+				{
+					"PackageIdentifier": "Adobe.Acrobat.Reader.32-bit"
+				},
+				{
+					"PackageIdentifier": "AntibodySoftware.WizTree"
+				},
+				{
+					"PackageIdentifier": "BurntSushi.ripgrep.MSVC"
+				},
+				{
+					"PackageIdentifier": "GIMP.GIMP"
+				},
+				{
+					"PackageIdentifier": "Git.Git"
+				},
+				{
+					"PackageIdentifier": "Gyan.FFmpeg"
+				},
+				{
+					"PackageIdentifier": "Hashicorp.Vagrant"
+				},
+				{
+					"PackageIdentifier": "ImageMagick.ImageMagick"
+				},
+				{
+					"PackageIdentifier": "Insecure.Nmap"
+				},
+				{
+					"PackageIdentifier": "IrfanSkiljan.IrfanView"
+				},
+				{
+					"PackageIdentifier": "JohnMacFarlane.Pandoc"
+				},
+				{
+					"PackageIdentifier": "Microsoft.OpenJDK.11"
+				},
+				{
+					"PackageIdentifier": "Microsoft.PowerToys"
+				},
+				{
+					"PackageIdentifier": "Microsoft.Sysinternals"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier": "Mozilla.Firefox"
+				},
+				{
+					"PackageIdentifier": "Notepad++.Notepad++"
+				},
+				{
+					"PackageIdentifier": "Open-Shell.Open-Shell-Menu"
+				},
+				{
+					"PackageIdentifier": "OpenJS.NodeJS"
+				},
+				{
+					"PackageIdentifier": "Oracle.JavaRuntimeEnvironment"
+				},
+				{
+					"PackageIdentifier": "Oracle.VirtualBox"
+				},
+				{
+					"PackageIdentifier": "Python.Launcher"
+				},
+				{
+					"PackageIdentifier": "Python.Python.3.10"
+				},
+				{
+					"PackageIdentifier": "RedHat.VirtViewer"
+				},
+				{
+					"PackageIdentifier": "SQLite.SQLite"
+				},
+				{
+					"PackageIdentifier": "TheDocumentFoundation.LibreOffice"
+				},
+				{
+					"PackageIdentifier": "TortoiseGit.TortoiseGit"
+				},
+				{
+					"PackageIdentifier": "TortoiseSVN.TortoiseSVN"
+				},
+				{
+					"PackageIdentifier": "VideoLAN.VLC"
+				},
+				{
+					"PackageIdentifier": "WiresharkFoundation.Wireshark"
+				},
+				{
+					"PackageIdentifier": "jqlang.jq"
+				},
+				{
+					"PackageIdentifier": "namazso.OpenHashTab"
+				},
+				{
+					"PackageIdentifier": "sharkdp.fd"
+				}
+			],
+			"SourceDetails": {
+				"Argument": "https://cdn.winget.microsoft.com/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion": "1.8.1911"
+}

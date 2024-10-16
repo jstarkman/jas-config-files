@@ -57,20 +57,19 @@
     "workbench.tree.indent": 32,
     "workbench.tree.renderIndentGuides": "always",
     "java.configuration.runtimes": [
-
         {
-            "name": "JavaSE-11",
-            "path": "C:/Program Files/Microsoft/jdk-11.0.21.9-hotspot"
+            "name": "JavaSE-21",
+            "path": "/usr/lib/jvm/java-21-openjdk-amd64",
         }
     ],
+    "java.configuration.updateBuildConfiguration": "interactive",
     "java.debug.settings.showHex": true,
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m",
-    "java.jdt.ls.java.home": "C:/Program Files/Microsoft/jdk-11.0.21.9-hotspot",
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk-amd64",
     "maven.executable.options": "-DskipTests=true",
     "maven.terminal.customEnv": [
         {
             "environmentVariable": "JAVA_HOME",
-            "value": "C:/Program Files/Microsoft/jdk-11.0.21.9-hotspot"
+            "value": "/usr/lib/jvm/java-21-openjdk-amd64",
         }
     ],
     "[css]": {
@@ -91,5 +90,25 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "[properties]": {}
+    "[properties]": {},
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.views.commitDetails.autolinks.enabled": false,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
+    },
+    "yaml.schemas": {
+    },
+    "remote.SSH.remotePlatform": {
+    }
 }
