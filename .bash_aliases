@@ -17,3 +17,7 @@ alias gitl-date='git log --oneline --graph --color --all --pretty=format:'\''%C(
 see-path () {
    echo ${1:-$PATH} | tr ":" "\n"
 }
+
+alias crc32-hex='gzip -1 -c | tail -c8 | od -A n -N 4 -t x4'
+alias crc32-int32='gzip -1 -c | tail -c8 | od -A n -N 4 -t d4'
+alias crc32-uint32='gzip -1 -c | tail -c8 | od -A n -N 4 -t u4'
