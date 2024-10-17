@@ -1,4 +1,4 @@
-PS1="${PS1%\\$ }\n\\$ "
+PS1='$(c=${?##0};echo "\e[01;31m${c:+\$? $c }\e[00m")'"${PS1%\\$ }\n\\$ "
 
 here=~/jas-config-files
 # Are we in WSL?
