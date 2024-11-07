@@ -21,7 +21,7 @@
 )
 
 (show-paren-mode t)              ;show parens
-(global-linum-mode t)            ;and lines
+(global-display-line-numbers-mode 1) ;and lines
 (setq-default c-basic-offset 4)  ;and line indents
 (setq-default tab-width 4)       ;force it
 (column-number-mode t)           ;and columns
