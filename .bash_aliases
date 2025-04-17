@@ -14,6 +14,11 @@ alias gits='git status'
 alias gitl='git log --oneline --graph --color --all --decorate'
 alias gitl-date='git log --oneline --graph --color --all --pretty=format:'\''%C(auto)%h%C(blue) %<|(19)%as%C(auto)%d %s'\'''
 
+alias dockerr='docker run --rm -it --entrypoint sh'
+alias podmanr='podman run --rm -it --entrypoint sh'
+alias dockere='docker exec -it'
+alias podmane='podman exec -it'
+
 see-path () {
    echo ${1:-$PATH} | tr ":" "\n"
 }
