@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Placement.AvailabilityZone, State.Name, InstanceId, InstanceType, PrivateIpAddress, [Tags[?Key==`Name`].Value][0][0]]' --output text \
+        | sort -k6 \
+        | sed -E 's/(stopped)/\x1b[91m\1\x1b[0m/g' \
+        | sed -E 's/(running)/\x1b[92m\1\x1b[0m/g'

@@ -18,6 +18,7 @@ alias dockerr='docker run --rm -it --entrypoint sh'
 alias podmanr='podman run --rm -it --entrypoint sh'
 alias dockere='docker exec -it'
 alias podmane='podman exec -it'
+alias k8s-show-ns='kubectl api-resources --verbs=list --namespaced -o name | xargs -t -n 1 kubectl get --show-kind --ignore-not-found --namespace'
 
 see-path () {
    echo ${1:-$PATH} | tr ":" "\n"
