@@ -1,7 +1,19 @@
 #!/bin/sh
 set -eu
 
-aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Placement.AvailabilityZone, State.Name, InstanceId, InstanceType, PrivateIpAddress, [Tags[?Key==`Name`].Value][0][0]]' --output text \
-        | sort -k6 \
+# shellcheck disable=SC2016 # Need inline backticks for JMESPath
+aws ec2 describe-instances \
+        --query 'Reservations[*].Instances[*].{
+                        AZ: Placement.AvailabilityZone,
+                        State: State.Name,
+                        ID: InstanceId,
+                        Type: InstanceType,
+                        IP: PrivateIpAddress,
+                        Name: not_null([Tags[?Key==`Name`].Value][0][0], `~~none~~`)
+                }[]
+                | sort_by(@, &Name)
+                | [*][AZ, State, ID, Type, IP, Name]' \
+        --output text \
         | sed -E 's/(stopped)/\x1b[91m\1\x1b[0m/g' \
-        | sed -E 's/(running)/\x1b[92m\1\x1b[0m/g'
+        | sed -E 's/(running)/\x1b[92m\1\x1b[0m/g' \
+        | column -t

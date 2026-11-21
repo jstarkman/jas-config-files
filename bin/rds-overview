@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+aws rds describe-db-instances \
+        --query 'sort_by(DBInstances, &DBInstanceIdentifier)[*]
+                .[DBInstanceStatus, DBInstanceClass, Engine, IAMDatabaseAuthenticationEnabled, DBInstanceIdentifier]' \
+        --output text \
+        | column -t

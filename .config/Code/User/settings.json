@@ -22,6 +22,7 @@
     ],
     "editor.tabSize": 8,
     "extensions.ignoreRecommendations": true,
+    "explorer.sortOrderLexicographicOptions": "unicode",
     "files.associations": {
         "*.log.*": "log",
         "*.service": "ini",

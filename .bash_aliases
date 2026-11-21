@@ -12,7 +12,13 @@ alias gitc='git commit -m'
 alias gitd='git diff --cached --color'
 alias gits='git status'
 alias gitl='git log --oneline --graph --color --all --decorate'
+alias gitlh='git log --oneline --graph --color --decorate'
 alias gitl-date='git log --oneline --graph --color --all --pretty=format:'\''%C(auto)%h%C(blue) %<|(19)%as%C(auto)%d %s'\'''
+
+# Derived from gitl-date; h == HEAD
+alias gitlh-date='git log --oneline --graph --color --pretty=format:'\''%C(auto)%h%C(blue) %<|(19)%as%C(auto)%d %s'\'''
+alias gitl-overview='git log --oneline --graph --color --all --simplify-by-decoration --pretty=format:'\''%C(auto)%h%C(blue) %<|(19)%as%C(auto)%d %s'\'''
+alias gitl-overview-branches='git log --oneline --graph --color --all --simplify-by-decoration --decorate-refs-exclude=refs/tags/\* --pretty=format:'\''%C(auto)%h%C(blue) %<|(19)%as%C(auto)%d %s'\'''
 
 alias digans='dig +noall +answer'
 

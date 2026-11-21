@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+aws efs describe-file-systems \
+        --query 'sort_by(FileSystems, &Name)[*].[FileSystemId, Name]' \
+        --output text \
+        | while read -r fsID name; do
+                aws efs describe-access-points --file-system-id "$fsID" \
+                        --query 'sort_by(AccessPoints, &RootDirectory.Path)[*].[AccessPointId, RootDirectory.Path]' \
+                        --output text \
+                        | awk "\$0=\"$fsID\t$name\t\"\$0"
+        done \
+        | column -t
